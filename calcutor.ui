@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>calcutor</class>
+ <widget class="QMainWindow" name="calcutor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>327</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>327</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>327</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>计算器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>331</width>
+      <height>418</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30000</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(5,5,5); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QFrame" name="frame">
+       <property name="minimumSize">
+        <size>
+         <width>65</width>
+         <height>51</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/mainwindow/image/welcome.jpg);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_delete">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(255,188,68); /* 设置按钮背景颜色 */
+    color: white; /* 设置文字颜色 */
+    border: 1px solid rgb(255,188,68); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(236,179,77); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(236,179,77); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>清除</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_clear">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+QPushButton {
+    background-color: rgb(255,188,68); /* 设置按钮背景颜色 */
+    color: white; /* 设置文字颜色 */
+    border: 1px solid rgb(255,188,68); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(236,179,77); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(236,179,77); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>AC</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">fQPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_divide">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(224,226,237); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(207,210,224); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(207,210,224); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>÷</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_by">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(224,226,237); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(207,210,224); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(207,210,224); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QPushButton" name="pushButton_1">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_minus">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(224,226,237); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(207,210,224); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(207,210,224); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QPushButton" name="pushButton_0">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_decPoint">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_equal">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: rgb(253,253,253); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(223,224,229); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(223,224,229); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>=</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_plus">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+QPushButton {
+    background-color: rgb(224,226,237); /* 设置按钮背景颜色 */
+    color: rgb(40,49,85); /* 设置文字颜色 */
+    border: 1px solid rgb(224,226,237); /* 设置按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    padding: 5px 10px; /* 设置按钮内边距 */
+    font-size: 14px; /* 设置文字大小 */
+    
+	font: 700 9pt &quot;Microsoft YaHei UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(207,210,224); /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(207,210,224); /* 鼠标按下时的背景颜色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>expenditure</class>
+ <widget class="QWidget" name="expenditure">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="6">
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>35</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Microsoft YaHei UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>支出种类</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbx_type">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Microsoft YaHei UI&quot;;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>不限</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>餐饮</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>购物</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>日用</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>交通</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>娱乐</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>水果</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>蔬菜</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>运动</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>教育</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>其他</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="pbtn_search">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e67e22; /* 橘色背景 */
+    color: white; /* 白色文字 */
+    border: 1px solid #e67e22; /* 橘色边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 5px 10px; /* 内边距 */
+    font-size: 14px; /* 文字大小 */
+}
+
+QPushButton:hover {
+    background-color: #d35400; /* 鼠标悬停时的颜色 */
+}
+
+QPushButton:pressed {
+    background-color: #a04000; /* 鼠标按下时的颜色 */
+}</string>
+        </property>
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="pbtn_newAdd">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e67e22; /* 橘色背景 */
+    color: white; /* 白色文字 */
+    border: 1px solid #e67e22; /* 橘色边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 5px 10px; /* 内边距 */
+    font-size: 14px; /* 文字大小 */
+}
+
+QPushButton:hover {
+    background-color: #d35400; /* 鼠标悬停时的颜色 */
+}
+
+QPushButton:pressed {
+    background-color: #a04000; /* 鼠标按下时的颜色 */
+}</string>
+        </property>
+        <property name="text">
+         <string>新增</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>35</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="4">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>35</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="pbtn_replace">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e67e22; /* 橘色背景 */
+    color: white; /* 白色文字 */
+    border: 1px solid #e67e22; /* 橘色边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 5px 10px; /* 内边距 */
+    font-size: 14px; /* 文字大小 */
+}
+
+QPushButton:hover {
+    background-color: #d35400; /* 鼠标悬停时的颜色 */
+}
+
+QPushButton:pressed {
+    background-color: #a04000; /* 鼠标按下时的颜色 */
+}</string>
+        </property>
+        <property name="text">
+         <string>重置</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>35</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Microsoft YaHei UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>支出时间</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateTimeEdit" name="dedit_time">
+          <property name="minimumSize">
+           <size>
+            <width>158</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;Microsoft YaHei UI&quot;;</string>
+          </property>
+          <property name="specialValueText">
+           <string/>
+          </property>
+          <property name="dateTime">
+           <datetime>
+            <hour>0</hour>
+            <minute>0</minute>
+            <second>0</second>
+            <year>2001</year>
+            <month>1</month>
+            <day>1</day>
+           </datetime>
+          </property>
+          <property name="displayFormat">
+           <string>yyyy/M/d </string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+          <property name="currentSectionIndex">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>568</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="5">
+       <widget class="QPushButton" name="pbtn_delete">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e67e22; /* 橘色背景 */
+    color: white; /* 白色文字 */
+    border: 1px solid #e67e22; /* 橘色边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 5px 10px; /* 内边距 */
+    font-size: 14px; /* 文字大小 */
+}
+
+QPushButton:hover {
+    background-color: #d35400; /* 鼠标悬停时的颜色 */
+}
+
+QPushButton:pressed {
+    background-color: #a04000; /* 鼠标按下时的颜色 */
+}</string>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>78</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

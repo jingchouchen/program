@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/loginIMG">
+        <file>image/eye_hide.png</file>
+        <file>image/eye_show.png</file>
+        <file>image/loginBackground.png</file>
+        <file>image/cell_loginBackground.png</file>
+        <file>image/login.png</file>
+        <file>image/anyother.png</file>
+        <file>image/pwd.png</file>
+        <file>image/user_name.png</file>
+        <file>image/background-4.png</file>
+        <file>image/green.png</file>
+        <file>image/register.png</file>
+        <file>image/username.png</file>
+        <file>image/forgetPWD.png</file>
+    </qresource>
+    <qresource prefix="/incomeIMG">
+        <file>image/add.png</file>
+        <file>image/delete.png</file>
+        <file>image/edit.png</file>
+        <file>image/quit.png</file>
+        <file>image/left.png</file>
+        <file>image/right.png</file>
+        <file>image/noData.png</file>
+    </qresource>
+    <qresource prefix="/mainwindow">
+        <file>image/expenditure.png</file>
+        <file>image/income.png</file>
+        <file>image/chart.png</file>
+        <file>image/calculator.png</file>
+        <file>image/exchangeRate.png</file>
+        <file>image/toolbox.png</file>
+        <file>image/welcome.jpg</file>
+        <file>image/noPhoto.png</file>
+        <file>image/translator.png</file>
+    </qresource>
+</RCC>

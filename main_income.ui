@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_income</class>
+ <widget class="QMainWindow" name="main_income">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actRecEdit"/>
+   <addaction name="actRecDelete"/>
+   <addaction name="actRecAdd"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <action name="actRecEdit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/main_income/image/edit.png</normaloff>:/main_income/image/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>编辑收入</string>
+   </property>
+   <property name="toolTip">
+    <string>编辑收入</string>
+   </property>
+  </action>
+  <action name="actRecDelete">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/main_income/image/delete.png</normaloff>:/main_income/image/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除收入</string>
+   </property>
+   <property name="toolTip">
+    <string>删除收入</string>
+   </property>
+  </action>
+  <action name="actRecAdd">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/main_income/image/add.png</normaloff>:/main_income/image/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加收入</string>
+   </property>
+   <property name="toolTip">
+    <string>添加收入</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/main_income/image/quit.png</normaloff>:/main_income/image/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
